@@ -1,3 +1,5 @@
+package entity;
+
 public class Cloth extends Product {
 
     private String size;
@@ -11,7 +13,7 @@ public class Cloth extends Product {
 
     @Override
     public String toString() {
-        return "Cloth{" +
+        return "entity.Cloth{" +
                 "size='" + size + '\'' +
                 ", material='" + material + '\'' +
                 '}';
