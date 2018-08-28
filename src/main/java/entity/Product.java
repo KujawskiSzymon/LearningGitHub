@@ -7,6 +7,7 @@ public class Product {
     protected  double weight;
     protected  String color;
     protected  int productCount;
+    public final static String PRODUCT_SEPARATOR = "#";
 
     public Product(long id, String productName, double price, double weight, String color, int productCount) {
         this.id = id;
@@ -18,18 +19,6 @@ public class Product {
     }
 
     public Product() {
-    }
-
-    @Override
-    public String toString() {
-        return "entity.Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", weight=" + weight +
-                ", color='" + color + '\'' +
-                ", productCount=" + productCount +
-                '}';
     }
 
     public void setPrice(double price) {
@@ -62,5 +51,11 @@ public class Product {
 
     public int getProductCount() {
         return productCount;
+    }
+
+    @Override
+    public String toString() {
+        return id + PRODUCT_SEPARATOR + productName + PRODUCT_SEPARATOR +
+                price + PRODUCT_SEPARATOR + weight + PRODUCT_SEPARATOR + color + PRODUCT_SEPARATOR + productCount;
     }
 }
