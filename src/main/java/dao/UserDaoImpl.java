@@ -20,7 +20,7 @@ public class UserDaoImpl implements UserDao {
         saveUsers(users);
     }
 
-    public void saveUsers(List<User> users) {
+    public void saveUsers(List<User> users) throws FileNotFoundException {
         PrintWriter printWriter = new PrintWriter(new FileOutputStream(filename,true));
         for(User user: users){
             printWriter.write(user.toString()+"\n");
